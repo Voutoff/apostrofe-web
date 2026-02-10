@@ -592,21 +592,64 @@ footer {
     font-size: 2.5rem;
   }
   
+  /* Estilos del Botón Menú */
+  .menu-toggle {
+    display: block; /* Lo hacemos visible */
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+
+  /* Ocultar el menú por defecto en móvil */
   nav {
+    display: none; /* Oculto al principio */
     position: absolute;
-    top: 100%;
+    top: 70px; /* Justo debajo del header */
     left: 0;
     width: 100%;
     background-color: #121212;
     border-bottom: 1px solid #333;
+    z-index: 999;
+    padding: 20px 0;
+  }
+
+  /* Mostrar menú cuando tiene la clase 'nav-active' */
+  nav.nav-active {
+    display: block;
   }
 
   nav ul {
-    flex-direction: column;
+    flex-direction: column; /* Vertical */
     align-items: center;
-    gap: 15px;
-    padding: 20px 0;
-    display: flex !important; 
+    gap: 20px;
+    padding: 0;
+    display: flex !important; /* Forzar flex para centrar */
+  }
+
+  nav a {
+    font-size: 1.1rem;
+    display: block;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Ajustes del logo en celular para que no se rompa */
+  .logo-area {
+    flex: 1; /* Ocupa el espacio restante */
+    justify-content: center;
+  }
+  
+  /* Ocultamos los logos pequeños en celular si molestan, o los achicamos */
+  .logo-img-placeholder {
+    width: 30px;
+    height: 30px;
+    font-size: 0.5rem;
+  }
+
+  .brand-name {
+    font-size: 0.9rem;
   }
 
   .booking-container {

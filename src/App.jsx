@@ -13,6 +13,7 @@ function App() {
     fecha: '',
     horaInicio: '14:00',
     horaFin: '16:00'
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
   });
 
   // --- MANEJO DE CAMBIOS EN INPUTS ---
@@ -125,7 +126,20 @@ function App() {
     <div className="App">
       {/* Header */}
       <header>
-        <div className="container nav-container">
+                  {/* Botón Hamburguesa (Solo visible en celular) */}
+          <div className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <i className="fas fa-bars"></i>
+          </div>
+
+          <nav className={isMenuOpen ? 'nav-active' : ''}>
+            <ul>
+              <li><a href="#reservas" onClick={() => setIsMenuOpen(false)}>Reservar</a></li>
+              <li><a href="#servicios" onClick={() => setIsMenuOpen(false)}>Servicios</a></li>
+              <li><a href="#videos" onClick={() => setIsMenuOpen(false)}>Videos</a></li>
+              <li><a href="#estudios" onClick={() => setIsMenuOpen(false)}>Las Sedes</a></li>
+              <li><a href="#contacto" onClick={() => setIsMenuOpen(false)}>Contacto</a></li>
+            </ul>
+          </nav>
           <div className="logo-area">
             {/* LOGO 1: APOSTROFE */}
             <img src="/imagenes/logo-apostrofe.jpg" className="logo-img-placeholder" alt="Logo Apostrofe" />
