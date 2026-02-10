@@ -132,7 +132,8 @@ function App() {
 /logo-apostrofe.jpg" className="logo-img-placeholder" alt="Logo Apostrofe" />
             
             {/* LOGO 2: LA CASA CLUB */}
-            <img src="/imagenes/logo-casaclub.png" className="logo-img-placeholder" alt="Logo Casa Club" />
+            <img src="apostrofe-web/public/imagenes
+/logo-casaclub.jpgg" className="logo-img-placeholder" alt="Logo Casa Club" />
             
             <div className="brand-name">APOSTROFE <span style={{color: '#8e44ad'}}>&</span> CASA CLUB</div>
           </div>
