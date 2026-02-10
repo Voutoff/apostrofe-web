@@ -338,7 +338,7 @@ function App() {
           <div className="studio-col">
             <div className="studio-bg" style={{backgroundImage: 'url(/imagenes/sala-apostrofe.jpg)'}}></div>
             <div className="studio-overlay">
-              <div className="studio-logo-placeholder" style={{backgroundImage: 'url(/imagenes/logo-apostrofe.png)'}}></div>
+              <div className="studio-logo-placeholder" style={{backgroundImage: 'url(/imagenes/logo-apostrofe.jpg)'}}></div>
               <h2>Apostrofe de Tolosa</h2>
               <p>Grabación & Ensayo</p>
               
@@ -357,7 +357,7 @@ function App() {
           <div className="studio-col">
             <div className="studio-bg" style={{backgroundImage: 'url(/imagenes/sala-casaclub.jpg)'}}></div>
             <div className="studio-overlay">
-              <div className="studio-logo-placeholder" style={{backgroundImage: 'url(/imagenes/logo-casaclub.png)'}}></div>
+              <div className="studio-logo-placeholder" style={{backgroundImage: 'url(/imagenes/logo-casaclub.jpg)'}}></div>
               <h2>La Casa Club LP</h2>
               <p>El Club de Música</p>
               
