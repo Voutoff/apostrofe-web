@@ -128,7 +128,8 @@ function App() {
         <div className="container nav-container">
           <div className="logo-area">
             {/* LOGO 1: APOSTROFE */}
-            <img src="/imagenes/logo-apostrofe.png" className="logo-img-placeholder" alt="Logo Apostrofe" />
+            <img src="apostrofe-web/public/imagenes
+/logo-apostrofe.jpg" className="logo-img-placeholder" alt="Logo Apostrofe" />
             
             {/* LOGO 2: LA CASA CLUB */}
             <img src="/imagenes/logo-casaclub.png" className="logo-img-placeholder" alt="Logo Casa Club" />
