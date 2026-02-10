@@ -145,7 +145,8 @@ nav a {
 /* --- HERO SECTION --- */
 .hero {
   height: calc(100vh - 80px);
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/seed/liverecording/1920/1080.jpg');
+  /* ATENCIÓN: NO borres la parte del 'linear-gradient', eso es el filtro oscuro para leer el texto */
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/imagenes/fondo.jpg'); 
   background-size: cover;
   background-position: center;
   display: flex;
@@ -153,28 +154,6 @@ nav a {
   justify-content: center;
   text-align: center;
 }
-
-.hero-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-  line-height: 1.1;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: var(--text-muted);
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
 /* --- SECCIÓN RESERVAS --- */
 .booking-container {
   display: grid;
