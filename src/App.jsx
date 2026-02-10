@@ -15,7 +15,7 @@ function App() {
     horaFin: '16:00'
   });
 
-  // --- ESTADO DEL MENÚ MÓVIL (NUEVO) ---
+  // --- ESTADO DEL MENÚ MÓVIL ---
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // --- MANEJO DE CAMBIOS EN INPUTS ---
@@ -118,20 +118,23 @@ function App() {
 
   return (
     <div className="App">
-      {/* Header */}
+      {/* Header ÚNICO y CORREGIDO */}
       <header>
         <div className="container nav-container">
+          
+          {/* Área de Logos */}
           <div className="logo-area">
             <img src="/imagenes/logo-apostrofe.jpg" className="logo-img-placeholder" alt="Logo Apostrofe" />
             <img src="/imagenes/logo-casaclub.jpg" className="logo-img-placeholder" alt="Logo Casa Club" />
             <div className="brand-name">APOSTROFE <span style={{color: '#8e44ad'}}>&</span> CASA CLUB</div>
           </div>
           
-          {/* Botón Hamburguesa y Navegación COMPLETA */}
+          {/* Botón Menú Hamburguesa */}
           <div className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <i className="fas fa-bars"></i>
           </div>
 
+          {/* Navegación con clase condicional para móvil */}
           <nav className={isMenuOpen ? 'nav-active' : ''}>
             <ul>
               <li><a href="#reservas" onClick={() => setIsMenuOpen(false)}>Reservar</a></li>
@@ -141,31 +144,10 @@ function App() {
               <li><a href="#contacto" onClick={() => setIsMenuOpen(false)}>Contacto</a></li>
             </ul>
           </nav>
+
         </div>
       </header>
-            </ul>
-          </nav>
-          <div className="logo-area">
-            {/* LOGO 1: APOSTROFE */}
-            <img src="/imagenes/logo-apostrofe.jpg" className="logo-img-placeholder" alt="Logo Apostrofe" />
-            
-            {/* LOGO 2: LA CASA CLUB */}
-            <img src="/imagenes/logo-casaclub.jpg" className="logo-img-placeholder" alt="Logo Casa Club" />
-            
-            <div className="brand-name">APOSTROFE <span style={{color: '#8e44ad'}}>&</span> CASA CLUB</div>
-          </div>
-          <nav>
-            <ul>
-              <li><a href="#reservas">Reservar</a></li>
-              <li><a href="#servicios">Servicios</a></li>
-              <li><a href="#videos">Videos</a></li>
-              <li><a href="#estudios">Las Sedes</a></li>
-              {/* Se eliminó el link de Galería del menú */}
-              <li><a href="#contacto">Contacto</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      {/* FIN DEL HEADER */}
 
       {/* Hero */}
       <section className="hero">
