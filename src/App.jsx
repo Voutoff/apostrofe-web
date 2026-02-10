@@ -338,7 +338,8 @@ function App() {
         <div className="studios-wrapper">
           {/* Apostrofe */}
           <div className="studio-col">
-            <div className="studio-bg" style={{backgroundImage: 'url(/imagenes/sala-apostrofe.jpg)'}}></div>
+            <div className="studio-bg" style={{backgroundImage: 'url(apostrofe-web/public/imagenes
+/sala-apostrofe.jpg.jpg)'}}></div>
             <div className="studio-overlay">
               <div className="studio-logo-placeholder" style={{backgroundImage: 'url(/imagenes/logo-apostrofe.png)'}}></div>
               <h2>Apostrofe de Tolosa</h2>
