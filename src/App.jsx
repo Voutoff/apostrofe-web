@@ -127,14 +127,8 @@ function App() {
       <header>
         <div className="container nav-container">
           <div className="logo-area">
-            {/* LOGO 1: APOSTROFE */}
-            <img src="apostrofe-web/public/imagenes
-/logo-apostrofe.jpg" className="logo-img-placeholder" alt="Logo Apostrofe" />
-            
-            {/* LOGO 2: LA CASA CLUB */}
-            <img src="apostrofe-web/public/imagenes
-/logo-casaclub.jpgg" className="logo-img-placeholder" alt="Logo Casa Club" />
-            
+            <div className="logo-img-placeholder">LOGO</div>
+            <div className="logo-img-placeholder">LOGO</div>
             <div className="brand-name">APOSTROFE <span style={{color: '#8e44ad'}}>&</span> CASA CLUB</div>
           </div>
           <nav>
@@ -143,7 +137,7 @@ function App() {
               <li><a href="#servicios">Servicios</a></li>
               <li><a href="#videos">Videos</a></li>
               <li><a href="#estudios">Las Sedes</a></li>
-              {/* Se eliminó el link de Galería del menú */}
+              <li><a href="#galeria">Galería</a></li>
               <li><a href="#contacto">Contacto</a></li>
             </ul>
           </nav>
@@ -338,10 +332,9 @@ function App() {
         <div className="studios-wrapper">
           {/* Apostrofe */}
           <div className="studio-col">
-            <div className="studio-bg" style={{backgroundImage: 'url(apostrofe-web/public/imagenes
-/sala-apostrofe.jpg.jpg)'}}></div>
+            <div className="studio-bg" style={{backgroundImage: 'url(https://picsum.photos/seed/apostrofe_room/800/1000.jpg)'}}></div>
             <div className="studio-overlay">
-              <div className="studio-logo-placeholder" style={{backgroundImage: 'url(/imagenes/logo-apostrofe.png)'}}></div>
+              <div className="studio-logo-placeholder" style={{backgroundImage: 'url(https://picsum.photos/seed/apostrofe_logo/100/100)'}}></div>
               <h2>Apostrofe de Tolosa</h2>
               <p>Grabación & Ensayo</p>
               
@@ -358,9 +351,9 @@ function App() {
           
           {/* La Casa Club */}
           <div className="studio-col">
-            <div className="studio-bg" style={{backgroundImage: 'url(/imagenes/sala-casaclub.jpg)'}}></div>
+            <div className="studio-bg" style={{backgroundImage: 'url(https://picsum.photos/seed/casaclub_room/800/1000.jpg)'}}></div>
             <div className="studio-overlay">
-              <div className="studio-logo-placeholder" style={{backgroundImage: 'url(/imagenes/logo-casaclub.png)'}}></div>
+              <div className="studio-logo-placeholder" style={{backgroundImage: 'url(https://picsum.photos/seed/lacasalogo/100/100)'}}></div>
               <h2>La Casa Club LP</h2>
               <p>El Club de Música</p>
               
@@ -373,6 +366,29 @@ function App() {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Galería */}
+      <section id="galeria" className="section-padding">
+        <div className="container">
+          <div className="text-center" style={{marginBottom: '30px'}}>
+            <h2>Galería de Fotos</h2>
+            <p style={{color: '#a0a0a0'}}>Imágenes de nuestras sesiones y equipos (Estilo Instagram)</p>
+          </div>
+
+          <div className="gallery-grid">
+            {[...Array(8)].map((_, i) => (
+              <div key={i} className="gallery-item">
+                <img src={`https://picsum.photos/seed/band${i+1}/400/400`} alt={`Foto ${i+1}`} />
+                <i className="fab fa-instagram gallery-icon"></i>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center" style={{marginTop: '30px'}}>
+            <a href="https://www.instagram.com/apostrofe.studio/" className="btn btn-primary" style={{background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)'}}>Seguinos en Instagram</a>
           </div>
         </div>
       </section>
