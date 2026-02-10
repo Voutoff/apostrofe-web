@@ -128,10 +128,10 @@ function App() {
         <div className="container nav-container">
           <div className="logo-area">
             {/* LOGO 1: APOSTROFE */}
-            <img src="/imagenes/logo-apostrofe.png" className="logo-img-placeholder" alt="Logo Apostrofe" />
+            <img src="/imagenes/logo-apostrofe.jpg" className="logo-img-placeholder" alt="Logo Apostrofe" />
             
             {/* LOGO 2: LA CASA CLUB */}
-            <img src="/imagenes/logo-casaclub.png" className="logo-img-placeholder" alt="Logo Casa Club" />
+            <img src="/imagenes/logo-casaclub.jpg" className="logo-img-placeholder" alt="Logo Casa Club" />
             
             <div className="brand-name">APOSTROFE <span style={{color: '#8e44ad'}}>&</span> CASA CLUB</div>
           </div>
