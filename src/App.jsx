@@ -13,8 +13,10 @@ function App() {
     fecha: '',
     horaInicio: '14:00',
     horaFin: '16:00'
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
   });
+
+  // --- ESTADO DEL MENÚ MÓVIL (NUEVO) ---
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // --- MANEJO DE CAMBIOS EN INPUTS ---
   const handleChange = (e) => {
@@ -34,7 +36,6 @@ function App() {
     let hora = parseInt(partes[0]);
     let minutos = parseInt(partes[1]);
 
-    // Redondear a 00 o 30
     if (minutos < 15) {
       minutos = 0;
     } else if (minutos > 45) {
@@ -45,12 +46,9 @@ function App() {
       minutos = 30; 
     }
 
-    // Formatear HH:MM
     let hStr = hora < 10 ? '0' + hora : hora;
     let mStr = minutos < 10 ? '0' + minutos : minutos;
-    
     const nuevoValor = hStr + ':' + mStr;
-    
     setFormData((prev) => ({ ...prev, [campo]: nuevoValor }));
   };
 
@@ -58,13 +56,11 @@ function App() {
   const enviarWhatsApp = () => {
     const { nombre, cel, banda, integrantes, sala, fecha, horaInicio, horaFin } = formData;
 
-    // Validaciones básicas
     if (!nombre || !cel || !banda || !integrantes || !sala || !fecha || !horaInicio || !horaFin) {
       alert("Por favor, completá todos los campos antes de enviar la consulta.");
       return;
     }
 
-    // Validación de Mínimo 2 Horas
     const [sh, sm] = horaInicio.split(':').map(Number);
     const [eh, em] = horaFin.split(':').map(Number);
 
@@ -87,11 +83,9 @@ function App() {
       return;
     }
 
-    // Determinar teléfono
     let telefono = sala === 'apostrofe' ? '5492216376619' : '5492214941472';
     let nombreSala = sala === 'apostrofe' ? 'Apostrofe de Tolosa' : 'La Casa Club LP';
 
-    // Construcción del mensaje
     const mensaje = `Hola! Quiero reservar turno en *${nombreSala}*.%0A%0A` +
                     `👤 *Nombre:* ${nombre}%0A` +
                     `📱 *Cel:* ${cel}%0A` +
@@ -126,7 +120,14 @@ function App() {
     <div className="App">
       {/* Header */}
       <header>
-                  {/* Botón Hamburguesa (Solo visible en celular) */}
+        <div className="container nav-container">
+          <div className="logo-area">
+            <img src="/imagenes/logo-apostrofe.jpg" className="logo-img-placeholder" alt="Logo Apostrofe" />
+            <img src="/imagenes/logo-casaclub.jpg" className="logo-img-placeholder" alt="Logo Casa Club" />
+            <div className="brand-name">APOSTROFE <span style={{color: '#8e44ad'}}>&</span> CASA CLUB</div>
+          </div>
+          
+          {/* Botón Hamburguesa y Navegación COMPLETA */}
           <div className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <i className="fas fa-bars"></i>
           </div>
@@ -138,6 +139,10 @@ function App() {
               <li><a href="#videos" onClick={() => setIsMenuOpen(false)}>Videos</a></li>
               <li><a href="#estudios" onClick={() => setIsMenuOpen(false)}>Las Sedes</a></li>
               <li><a href="#contacto" onClick={() => setIsMenuOpen(false)}>Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
             </ul>
           </nav>
           <div className="logo-area">
